@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Declaração do tipo de documento e idioma da página (inglês) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD using LocalStorage</title>
+    
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Link para a biblioteca Boxicons para ícones -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!-- Contêiner principal da página -->
+    <div class="container">
+        
+        <!-- Cabeçalho da página com o título e o botão de adicionar -->
+        <div class="header">
+            <span>Employers salary list</span> <!-- Título da página -->
+            <!-- Botão para adicionar um novo registro, chama a função openModal() -->
+            <button onclick="openModal()" id="new">Add</button>
+        </div>
+
+        <!-- Seção da tabela onde os dados dos salários serão exibidos -->
+        <div class="divTable">
+            <table>
+                <thead>
+                    <!-- Cabeçalhos da tabela -->
+                    <tr>
+                        <th>Name</th> <!-- Nome do empregado -->
+                        <th>Function</th> <!-- Função ou cargo do empregado -->
+                        <th>Salary</th> <!-- Salário do empregado -->
+                        <th class="action">Edit</th> <!-- Coluna para editar o registro -->
+                        <th class="action2">Delete</th> <!-- Coluna para excluir o registro -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados da tabela serão inseridos dinamicamente aqui -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Modal para adicionar ou editar um salário -->
+        <div class="modalContainer">
+            <div class="modal">
+                <form>
+                    <!-- Campo para nome do empregado -->
+                    <label for="m-name">Name</label>
+                    <input id="m-name" type="text" required/>
+
+                    <!-- Campo para o cargo ou função do empregado -->
+                    <label for="m-job">Role</label>
+                    <input id="m-job" type="text" required/>
+
+                    <!-- Campo para o salário do empregado -->
+                    <label for="m-salary">Salary</label>
+                    <input id="m-salary" type="number" required/>
+
+                    <!-- Botão para salvar o novo registro -->
+                    <Button id="saveButton">Save</Button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Inclusão do arquivo JavaScript que contém a lógica para manipulação de dados -->
+    <script src="script.js"></script>
+</body>
+</html>
